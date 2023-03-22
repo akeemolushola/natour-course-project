@@ -4,16 +4,32 @@
 
 .u-margin-big {
     margin-bottom: 8rem !important;
+
+    @include responsive(tab-portrait) {
+        margin-bottom: 4rem !important;
+    }
 }
 
 .u-margin-medium {
     margin-bottom: 4rem !important;
+
+    @include responsive(tab-portrait) {
+        margin-bottom: 3rem !important;
+    }
 }
 
 .u-margin-small {
     margin-bottom: 1rem !important;
+
+    @include responsive(tab-portrait) {
+        margin-bottom: .7rem !important;
+    }
 }
 
 .u-margin-top-huge {
     margin-top: 10rem !important;
+
+    @include responsive(tab-portrait) {
+        margin-bottom: 7rem !important;
+    }
 }

@@ -11,11 +11,50 @@
 
     <link rel="stylesheet" href="css/icon-font.css" />
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- <link rel="stylesheet" href="css/style.min.css" /> -->
     <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
 
     <title>Natours | Exciting tours for adventurous people</title>
   </head>
   <body>
+
+    <div class="disclaimer" style=" text-align: center;
+    background-color: #2b2b2b;
+    color: #ccc;
+    font-weight: 600;
+    width: 100%;
+    font-size: 50%;
+    padding: .6rem .6rem;
+    z-index: 201;
+    letter-spacing: .3rem;">
+    THIS WAS BUILT STEP BY STEP FOLLOWING JONAS COURSE
+  </div>
+
+    <div class="navigation">
+      <input type="checkbox" class="navigation__checkbox" id="navi-toggle">
+
+      <label for="navi-toggle" class="navigation__button">
+        <span class="navigation__icon">&nbsp;</span>
+      </label>
+
+      <div class="navigation__background">&nbsp;</div>
+
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span> Natours</a></li>
+          <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span>Your Benefit</a></li>
+          <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span>Popular Tours</a></li>
+          <li class="navigation__item"><a href="#" class="navigation__link"><span>04</span>Stories</a></li>
+          <li class="navigation__item"><a href="#" class="navigation__link"><span>05</span>Book Now</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <!-- <p>A town hall different from bala blu, blue blu bulaba. broom broom broom brooooooooom. Bala blu blue blu bulaba. The farmers will make more money. Your lunch will not be imported, cassava garri ewa and ehhh ehhhhnn. The farmer will make money, the dinner would be cassava, eba, ewa and everything.</p>
+
+    <p>A town hall different from bala blu, blue blu bulaba. broom broom broom brooooooooom. Bala blu blue blu bulaba. The farmers will make more money. Your lunch will not be imported, cassava garri ewa and ehhh ehhhhnn. The farmer will make money, the dinner would be cassava, eba, ewa and everything.</p> -->
+
     <header class="header">
       <div class="header__logo-container">
         <img src="img/logo-white.png" alt="Natour logo" class="header__logo" />
@@ -134,7 +173,7 @@
         </div>
       </section>
 
-      <section class="section-tours">
+      <section class="section-tours" id="section-tour">
         <div class="u-center-text u-margin-big">
           <h2 class="heading-secondary">Most Popular Tours</h2>
         </div>
@@ -167,7 +206,7 @@
                     <p class="card__text-only">Only</p>
                     <p class="card__text-amount">$237</p>
                   </div>
-                  <a href="#" class="btn btn--white">Book Now</a>
+                  <a href="#popup" class="btn btn--white">Book Now</a>
                 </div>
               </div>
             </div>
@@ -201,7 +240,7 @@
                     <p class="card__text-only">Only</p>
                     <p class="card__text-amount">$437</p>
                   </div>
-                  <a href="#" class="btn btn--white">Book Now</a>
+                  <a href="#popup" class="btn btn--white">Book Now</a>
                 </div>
               </div>
             </div>
@@ -236,7 +275,7 @@
                     <p class="card__text-only">Only</p>
                     <p class="card__text-amount">$437</p>
                   </div>
-                  <a href="#" class="btn btn--white">Book Now</a>
+                  <a href="#popup" class="btn btn--white">Book Now</a>
                 </div>
               </div>
             </div>
@@ -263,7 +302,7 @@
             We make poeple genuinely happy
           </h2>
         </div>
-        <div class="row">
+        <div class="story__row row">
           <div class="story">
             <figure class="story__shape">
               <img src="img/nat-8.jpg" alt="Less Concern" class="story__image">
@@ -298,7 +337,7 @@
 
 
       <section class="section-booking">
-        <div class="row">
+        <div class="row section-booking__row">
           <div class="booking">
             <div class="booking__form">
               
@@ -348,7 +387,12 @@
 
     <footer class="footer">
       <div class="footer__logo-box">
-        <img src="img/logo-green-2x.png" alt="Natour logo" class="footer__logo">
+
+        <picture class="footer__logo">
+          <source srcset="img/logo-green-small-1x.png 1x, img/logo-green-small-2x.png 2x"
+                  media="(max-width:37.5rem)">
+          <img srcset="img/logo-green-1x.png 1x, img/logo-green-2x.png 2x" alt="Natour logo" class="footer__logo">
+        </picture>
       </div>
 
       <div class="row">
@@ -366,12 +410,30 @@
 
         <div class="col-1-of-2">
           <p class="footer__copy">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel sed aliquid distinctio, temporibus doloribus incidunt aperiam deleniti, nesciunt expedita, quam voluptatibus quas perspiciatis autem nostrum dicta odio laudantium architecto molestiae?
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Vel sed aliquid distinctio, 
           </p>
         </div>
       </div>
     </footer>
 
+    <div class="popup" id="popup">
+      <div class="popup__content">
+        <div class="popup__left">
+          <img src="img/nat-8.jpg" alt="Tourre" class="popup__img">
+          <img src="img/nat-9.jpg" alt="Tourre" class="popup__img">
+        </div>
+        <div class="popup__right">
+          <a href="#section-tour" class="popup__close">&times;</a>
+          <h2 class="heading-secondary u-margin-small">Start Boking now</h2>
+          <h3 class="heading-tertiary u-margin-small">Please &ndash; read this terms or else, you a gonna</h3>
+
+          <p class="popup__text">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nam minima fugiat dignissimos sit voluptate dolor aspernatur reprehenderit quidem accusantium, maxime dolorum quos, nesciunt consequuntur. Dolor dignissimos inventore quasi perferendis fugiat? Voluptas corporis iste porro esse maxime nemo. Distinctio impedit laborum repudiandae dolor quae quisquam explicabo excepturi alias obcaecati quos eveniet facilis consectetur possimus animi assumenda porro veniam, sunt id voluptates modi, minima accusamus nihil! Suscipit facere dolore esse veritatis molestias.</p>
+
+          <a href="#" class="btn btn--green">Book Now</a>
+        </div>
+      </div>
+    </div>
+     
     <!-- <section class="grid-test">
 
       <div class="row">

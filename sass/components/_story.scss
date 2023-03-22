@@ -8,8 +8,27 @@
     padding: 6rem;
     padding-left: 9rem;
     font-size: 1.6rem;
-
     transform: skewX(-12deg);
+
+    @include responsive(tab-portrait) {
+        width: 100%;
+        padding: 4rem;
+        padding-left: 6rem;
+
+        @include responsive(phone) {
+           transform: skewX(0);
+        }
+    }
+
+    &__row {
+        @include responsive(tab-portrait) {
+            max-width: 70rem !important;
+        }
+
+        @include responsive(phone) {
+            max-width: 50rem !important;
+        }
+    }
 
     &__shape {
         width: 15rem;
@@ -24,6 +43,10 @@
         -webkit-clip-path: circle(50% at 50% 50%);
 
         transform: translateX(-3rem) skewX(12deg);
+
+        @include responsive(phone) {
+            transform: translateX(-3rem) skewX(0);
+         }
     }
 
     &__image {
@@ -34,6 +57,10 @@
 
     &__text {
         transform: skewX(12deg);
+        @include responsive(phone) {
+            transform: skewX(0);
+         }
+        
     }
 
     &__caption {

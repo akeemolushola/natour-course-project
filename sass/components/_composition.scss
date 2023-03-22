@@ -10,29 +10,59 @@
         z-index: 10;
         transition: all .4s;
 
+        @include responsive(tab-portrait) {
+            position: relative;
+            float: left;
+            width: 33.3333333%;
+
+        }
+
         &--1 {
             top: -2rem;
             left: 20rem;
-            filter: grayscale(.5) blur(.1rem)
+            filter: grayscale(.5) blur(.2rem);
+
+            @include responsive(tab-portrait) {
+                top: 0;
+                left: 3rem;
+
+            }
         }
 
         &--2 {
             top: 2rem;
             left: 0rem;
-            filter: grayscale(.8) blur(.08rem)
+            filter: grayscale(.8) blur(.1rem);
+
+            @include responsive(tab-portrait) {
+                top: 0;
+                box-shadow: 0 2.5rem 4rem rgba($color-black, .6);
+                transform: scale(1.15);
+                filter: grayscale(0) blur(0);
+                z-index: 30;
+
+                &:hover {
+                    filter: grayscale(0) blur(0);
+                }
+            }
         }
 
         &--3 {
             top: 12rem;
             left: 10rem;
-            filter: grayscale(.4) blur(.02rem)
+            filter: grayscale(.3) blur(.2rem);
+
+            @include responsive(tab-portrait) {
+                top: 0;
+                left: -5rem;     
+            }
         }
 
         &:hover {
             transform: scale(1.15);
             box-shadow: 0 2.5rem 4rem rgba($color-black, .6);
-            z-index: 20;
-            filter: grayscale(0) blur(0)
+            z-index: 40;
+            filter: grayscale(0) blur(0);
         }
     }
 

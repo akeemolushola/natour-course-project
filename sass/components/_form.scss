@@ -2,6 +2,10 @@
 
     &__group:not(:last-child) {
         margin-bottom: 2rem;
+
+        @include responsive(phone) {
+            margin-bottom: 1rem;
+        }
     }
 
     &__input {
@@ -15,6 +19,10 @@
         width: 80%;
         display: block;
         border-bottom: 3px solid transparent;
+
+        @include responsive(phone) {
+            width: 100%;
+        }
 
         &:focus {
             outline: none;
@@ -50,6 +58,11 @@
     &__radio-group {
         width: 45%;
         display: inline-block;
+
+        @include responsive(phone) {
+            width: 100%;
+            margin-bottom: 2rem;
+        }
     }
 
     &__radio-input {
